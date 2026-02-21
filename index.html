@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek Text Filter | Remove "XXX" Automatically</title>
+    <meta name="description"
+        content="A premium text filtering tool that automatically removes lines containing 'XXX' from your clipboard.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Sleek Text <span class="gradient-text">Filter</span></h1>
+            <p class="subtitle">Paste your text below to automatically filter out lines containing "XXX"</p>
+        </header>
+
+        <section class="glass-card">
+            <div class="controls">
+                <button id="pasteBtn" class="btn btn-primary">
+                    <span class="icon">📋</span> Paste & Filter
+                </button>
+                <button id="clearBtn" class="btn btn-outline" onclick="location.reload()">
+                    <span class="icon">🔄</span> Clear
+                </button>
+            </div>
+
+            <div class="text-areas">
+                <div class="area-group" id="inputSection" style="display: none;">
+                    <label>Original Text</label>
+                    <textarea id="inputText" readonly placeholder="Your original text will appear here..."></textarea>
+                </div>
+
+                <div class="area-group" id="outputSection" style="display: none;">
+                    <label>Filtered Result</label>
+                    <textarea id="outputText" readonly placeholder="Cleaned text will appear here..."></textarea>
+                    <button id="copyBtn" class="btn btn-secondary">
+                        <span class="icon">✨</span> Copy Result
+                    </button>
+                </div>
+            </div>
+
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">📂</div>
+                <p>No text processed yet. Click paste to begin!</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with ❤️ for အစ်ကို</p>
+        </footer>
+    </main>
+
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
